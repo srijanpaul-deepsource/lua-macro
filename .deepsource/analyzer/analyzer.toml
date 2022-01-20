@@ -4,6 +4,7 @@ name = "Lua"
 description = "Run static analysis on lua codebases"
 category = "language"
 visibility = "public"
+analysis_command = "cd /app && lua ./src/main.lua"
 
 [analyzer]
   command = "cd /app && lua ./src/main.lua"
