@@ -1,5 +1,3 @@
-version = 1
-
 [[analyzers]]
 name = "github.com/srijanpaul-deepsource/lua-macro"
 enabled = true
