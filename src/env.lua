@@ -3,11 +3,9 @@ local json = require "lib.json"
 local path = require "path"
 local os = require "os"
 
-local cwd = lfs.currentdir()
-
-local is_local_run = true
 local env
-if is_local_run then
+if _G.is_local_run then
+  local cwd = lfs.currentdir()
   env = {
     CODE_PATH = path.join(cwd, "code-dir")
   }
