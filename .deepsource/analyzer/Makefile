@@ -2,6 +2,8 @@ build:
 	apk update
 	cp -r ../../. /app
 	apk add lua luarocks
-	luarocks install luacheck
+	cd /app
 	luarocks install luafilesystem
+	luarocks install luacheck
 	luarocks install lua-path
+	luarocks path --bin >> ~/.bash_profile
