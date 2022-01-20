@@ -1,0 +1,21 @@
+title = "Found unused variable"
+severity = "major"
+cateogry = "antipattern"
+description = """
+Variables that are declared but not used serve no purpose and should be removed.
+<!--more-->
+## Example
+### Bad practice
+```lua
+local x = 1 -- unused
+local y = 2
+print(y)
+```
+
+### Recommended
+```lua
+local y = 2
+print(y)
+```
+"""
+weight=40
