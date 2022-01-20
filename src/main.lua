@@ -14,7 +14,9 @@ end
 local reports <const> = run_analysis()
 for _, report in ipairs(reports) do
   for _, issue in ipairs(report) do
-    issue.message = luacheck.get_message(issue)
-    print(json.encode(issue))
+    local message = luacheck.get_message(issue)
+    local ds_issue = util.luacheck_issue_to_ds_issue(issue, "foo", message)
+    local issue_json = json.encode(ds_issue)
+    print(issue_json)
   end
 end
