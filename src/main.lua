@@ -29,4 +29,3 @@ end
 local reports = run_analysis()
 local report = util.generate_ds_report(reports)
 util.publish_report(report)
-print("hi")
