@@ -1,8 +1,8 @@
 build:
-	apk update
+	apt-get update
 	cp -r ../../. /app
-	apk add lua
-	apk add luarocks
+	apt-get install lua
+	apt-get install luarocks
 	cd /app
 	luarocks install luafilesystem
 	luarocks install luacheck

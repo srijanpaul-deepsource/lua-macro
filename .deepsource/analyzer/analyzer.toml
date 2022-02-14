@@ -10,6 +10,5 @@ analysis_command = "cd /app && lua ./src/main.lua"
   command = "cd /app && lua ./src/main.lua"
 
 [build]
-  image = "cytopia/ansible-lint:5"
-  steps = """cp -r . /app
-  apk add shadow git grep"""
+  image = "ubuntu:18.04"
+  steps = """cp -r . /app"""
