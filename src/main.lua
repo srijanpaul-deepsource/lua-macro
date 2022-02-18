@@ -12,7 +12,7 @@ local function run_analysis()
   for _, fpath in ipairs(code_files) do
     local ext = fpath:sub(-3)
     if ext == "lua" then
-      lua_files[#lua_files + 1] = ext
+      lua_files[#lua_files + 1] = fpath
     end
   end
 
