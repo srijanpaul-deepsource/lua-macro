@@ -7,7 +7,7 @@ visibility = "public"
 analysis_command = "cd /app && lua ./src/main.lua"
 
 [analyzer]
-  command = "cd /app && lua ./src/main.lua"
+  command = "lua ./src/main.lua"
 
 [build]
   image = "ubuntu:18.04"
