@@ -1,0 +1,24 @@
+title = "Found unused variable"
+verbose_name = "unused-var"
+severity = "minor"
+category = "performance"
+weight = 40
+description = """
+Avoid having unused variables.
+<!--more-->
+Unused variables baaaad.
+
+## Examples
+### Bad Practice
+```lua
+local x = 1 -- unused
+local y = 2
+print(y)
+```
+### Recommended
+```lua
+local y = 2
+print(y)
+```
+"""
+recommended = true
