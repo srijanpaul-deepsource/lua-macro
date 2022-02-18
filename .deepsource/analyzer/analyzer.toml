@@ -4,10 +4,10 @@ name = "Lua"
 description = "Run static analysis on lua codebases"
 category = "language"
 visibility = "public"
-analysis_command = "echo $LUA_PATH && lua ./src/main.lua"
+analysis_command = "echo $LUA_PATH && lua5.3 ./src/main.lua"
 
 [analyzer]
-  command = "echo $LUA_PATH && lua ./src/main.lua"
+  command = "echo $LUA_PATH && lua5.3 ./src/main.lua"
 
 [build]
   image = "ubuntu:18.04"
@@ -24,4 +24,6 @@ analysis_command = "echo $LUA_PATH && lua ./src/main.lua"
 	luarocks install lua-path
   chmod 777 ./hacc
   ./hacc
+  cat ~/.bash_profile
+  lua5.3 -v
   """
