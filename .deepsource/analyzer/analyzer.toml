@@ -14,6 +14,7 @@ analysis_command = "lua ./src/main.lua"
   steps = """
 	apt-get update
 	cp -R . /app
+  apt-get install --yes --no-install-recommends git grep openssh-server
 	apt-get install --yes lua5.3
 	apt-get install --yes luarocks
   apt-get install --yes liblua5.3-dev
