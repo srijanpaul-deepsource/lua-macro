@@ -28,5 +28,6 @@ end
 
 local reports = run_analysis()
 local report = util.generate_ds_report(reports)
+print('Number of issues reported: ', #report.issues)
 util.publish_report(report)
 print("x")
