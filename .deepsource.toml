@@ -7,3 +7,4 @@ enabled = true
 [[analyzers]]
 name = "github.com/srijanpaul-deepsource/lua-macro"
 enabled = true
+
