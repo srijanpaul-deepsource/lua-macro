@@ -20,7 +20,7 @@ function util.crawl_dir(dir_path, result)
             local attr = lfs.attributes(f)
             assert(type(attr) == "table")
             if attr.mode == "directory" then
-                util.crawl_dir(f)
+                result = table.concat(result, util.crawl_dir(f))
             else
                 result[#result + 1] = f
             end
