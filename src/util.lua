@@ -20,7 +20,7 @@ function util.crawl_dir(dir_path, result)
             local attr = lfs.attributes(f)
             assert(type(attr) == "table")
             if attr.mode == "directory" then
-                local sub_dir_files = table.concat(result, util.crawl_dir(f))
+                local sub_dir_files = util.crawl_dir(f)
                 for _, file in ipairs(sub_dir_files) do
                   result[#result + 1] = file
                 end
