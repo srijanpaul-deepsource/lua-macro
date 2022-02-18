@@ -1,0 +1,25 @@
+title = "Unreachable code"
+severity = "major"
+category = "antipattern"
+description = """
+This point in code can never be reached.
+<!--more-->
+Unreachable code is never executed.
+Consider removing it.
+## Example
+### Bad practice
+```lua
+for i = 1, 100 do
+  if cond(i) then f() end break
+end
+```
+
+### Recommended
+```lua
+for i = 1, 100 do
+  if cond(i) then f(); break end
+end
+```
+"""
+weight=40
+recommended=true

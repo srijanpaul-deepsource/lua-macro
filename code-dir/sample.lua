@@ -7,3 +7,8 @@ local p = 10
 local p = 10
 local q = 20
 local r = 1020
+
+for i = 1, 100  do
+  break
+  print("HELLO!")
+end
