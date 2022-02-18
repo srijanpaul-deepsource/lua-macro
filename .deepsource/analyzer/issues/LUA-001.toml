@@ -1,6 +1,6 @@
 title = "Found unused variable"
 severity = "major"
-cateogry = "antipattern"
+category = "antipattern"
 description = """
 Variables that are declared but not used serve no purpose and should be removed.
 <!--more-->
@@ -19,3 +19,4 @@ print(y)
 ```
 """
 weight=40
+recommended=true
