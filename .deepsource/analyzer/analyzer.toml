@@ -21,5 +21,5 @@ analysis_command = "lua ./src/main.lua"
 	luarocks install luafilesystem
 	luarocks install luacheck
 	luarocks install lua-path
-	luarocks path --bin >> ~/.bash_profile
+	eval "luarocks path --bin"
   """
