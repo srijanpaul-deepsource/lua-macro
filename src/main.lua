@@ -16,9 +16,13 @@ local function run_analysis()
     end
   end
 
+  print("Files for analysis: ")
+  for _, file_name in ipairs(lua_files) do
+    print(file_name)
+  end
+
   local reports = luacheck(lua_files)
   for i, report in ipairs(reports) do
-    print(code_dir)
     local file_path = lua_files[i]
     report.file_path = file_path:sub(#code_dir + 2, #file_path)
   end

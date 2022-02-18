@@ -16,4 +16,6 @@ else
   }
 end
 
+print("Code path: ", env.CODE_PATH)
+
 return env
