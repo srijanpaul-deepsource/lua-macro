@@ -14,7 +14,7 @@ analysis_command = "lua ./src/main.lua"
   steps = """
 	apt-get update
 	cp -R . /app
-	apt-get install lua5.3	-y
+	apt-get install --yes lua5.3
 	apt-get install luarocks
 	cd /app
 	luarocks install luafilesystem
