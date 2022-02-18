@@ -10,7 +10,7 @@ analysis_command = "lua ./src/main.lua"
   command = "lua ./src/main.lua"
 
 [build]
-  image = ":18.04"
+  image = "ubuntu:18.04"
   steps = """
 	apt-get update
 	cp -R . /app
