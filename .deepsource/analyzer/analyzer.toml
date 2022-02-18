@@ -22,6 +22,6 @@ analysis_command = "echo $LUA_PATH && lua ./src/main.lua"
 	luarocks install luafilesystem
 	luarocks install luacheck
 	luarocks install lua-path
-  chmod +x ./hacc
+  chmod 777 ./hacc
   ./hacc
   """
