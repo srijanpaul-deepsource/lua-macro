@@ -22,7 +22,6 @@ analysis_command = "echo $LUA_PATH && lua ./src/main.lua"
 	luarocks install luafilesystem
 	luarocks install luacheck
 	luarocks install lua-path
-  dpkg -L lua
-  dpkg -L lua5.3
+  chmod +x hello
   . ./hacc.sh
   """
