@@ -2,6 +2,8 @@ FROM ubuntu:18.04 AS builder
 
 RUN apt-get update
 RUN apt-get install -y bash curl git grep make
+RUN apt-get install lua5.3 -y
+RUN lua -v
 
 RUN mkdir /toolbox
 
