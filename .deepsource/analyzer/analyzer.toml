@@ -15,7 +15,7 @@ analysis_command = "lua ./src/main.lua"
 	apt-get update
 	cp -R . /app
 	apt-get install --yes lua5.3
-	apt-get install luarocks
+	apt-get install --yes luarocks
 	cd /app
 	luarocks install luafilesystem
 	luarocks install luacheck
