@@ -7,6 +7,10 @@ local util = require "src.util"
 local function run_analysis()
   local code_dir = env.CODE_PATH
   local code_files = util.crawl_dir(code_dir)
+  print("All files:")
+  for _, file_name in ipairs(code_files) do
+    print(file_name)
+  end
 
   local lua_files = {}
   for _, fpath in ipairs(code_files) do
@@ -34,4 +38,3 @@ local reports = run_analysis()
 local report = util.generate_ds_report(reports)
 print('Number of issues reported: ', #report.issues)
 util.publish_report(report)
-print("x")

@@ -38,7 +38,7 @@ function util.load_issue_codes()
   local json_string = f:read("*a")
   f:close()
 
-  print(json_string)
+  -- print(json_string)
   local data = json.decode(json_string)
   return data
 end
@@ -61,7 +61,7 @@ function util.lc_issue_to_ds_issue(lc_issue, file_path, issue_text)
     path = file_path,
     position = {
       begin  = { line = start_line, column = start_column },
-     ["end"] = { line = end_line, column = end_column },
+      ["end"] = { line = end_line, column = end_column },
     }
   }
 
