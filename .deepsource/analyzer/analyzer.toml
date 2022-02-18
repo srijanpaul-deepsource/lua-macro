@@ -4,10 +4,10 @@ name = "Lua"
 description = "Run static analysis on lua codebases"
 category = "language"
 visibility = "public"
-analysis_command = "lua ./src/main.lua"
+analysis_command = "echo $LUA_PATH && lua ./src/main.lua"
 
 [analyzer]
-  command = "lua ./src/main.lua"
+  command = "echo $LUA_PATH && lua ./src/main.lua"
 
 [build]
   image = "ubuntu:18.04"
