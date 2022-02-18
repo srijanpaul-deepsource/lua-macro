@@ -13,7 +13,7 @@ analysis_command = "lua ./src/main.lua"
   image = "ubuntu:18.04"
   steps = """
 	apt-get update
-	cp -r ../../. /app
+	cp -R . /app
 	apt-get install lua5.3	-y
 	apt-get install luarocks
 	cd /app
