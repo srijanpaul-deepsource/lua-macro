@@ -10,12 +10,13 @@ analysis_command = "lua ./src/main.lua"
   command = "lua ./src/main.lua"
 
 [build]
-  image = "ubuntu:18.04"
+  image = ":18.04"
   steps = """
 	apt-get update
 	cp -R . /app
 	apt-get install --yes lua5.3
 	apt-get install --yes luarocks
+  apt-get install --yes liblua5.3-dev
 	cd /app
 	luarocks install luafilesystem
 	luarocks install luacheck
