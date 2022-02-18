@@ -1,7 +1,7 @@
 build:
 	apt-get update
 	cp -r ../../. /app
-	apt-get install lua
+	apt install lua5.3	
 	apt-get install luarocks
 	cd /app
 	luarocks install luafilesystem
